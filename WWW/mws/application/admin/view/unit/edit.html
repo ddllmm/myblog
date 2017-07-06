@@ -1,0 +1,68 @@
+<!--edit页面的模版-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li class="{$home}">
+					<a href="home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="{$javascript}">
+					<a href="javascript">Javascript</a>
+				</li>
+				<li class="{$php}">
+					<a href="php">PHP</a>
+				</li>
+				<li class="{$mysql}">
+					<a href="mysql">Mysql</a>
+				</li>
+				<li class="{$other}">
+					<a href="other">other</a>
+				</li>
+				<li class="{$about}">
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h2 class="sub-header">Edit Section</h2> {volist name="list" id="vo"}
+			<div class="form-group" style="width: 50%;">
+				<form action="update" method="post">
+					<label class="control-label">id:</label>
+					<input name="id" type="text" class="form-control" value="{$vo.id}" readonly="readonly">
+					<label class="control-label">header:</label>
+					<input name="header" type="text" class="form-control" value="{$vo.header}">
+					<br />
+					<label class="control-label">context:</label>
+					<input name="context" type="text" class="form-control" value="{$vo.context}">
+					<br />
+					<label class="control-label">detail:</label>
+					<textarea name="detail" type="text" class="form-control" rows="10">{$vo.detail}</textarea>
+					<br />
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal">cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
+					<button type="submit" class="btn btn-success">Save</button>
+				</form>
+			</div>
+			{/volist}
+		</div>
+	</div>
+</div>
+<!-- editModal -->
+<form action="cancel" method="post">
+	<div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">cancel</h4>
+				</div>
+				<div class="modal-body">
+					<label for="recipient-name" class="control-label">Are you sure this ?</label>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					<button type="submit" class="btn btn-primary">Yes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

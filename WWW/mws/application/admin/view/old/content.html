@@ -1,0 +1,61 @@
+<div style="margin-top: 50px;height: 100%;">
+	<div style="width:10%; height: 900px; overflow: hidden; float: left;background-color:#EEEEEE;">
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<p style="color: #FFFFFF;">Data</p>
+		</div>
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color: #FFFFFF;" href="Home">Home</a>
+		</div>
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="Anime">Anime</a>
+		</div>
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="Music">Music</a>
+		</div>
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="Game">Game</a>
+		</div>
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="Vidio">Vidio</a>
+		</div>
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="Cool">Cool</a>
+		</div>
+	</div>
+	<div style="width:90%; float: right;border:5px solid white;">
+		<table class="table table-bordered table-striped table-hover">
+			<thead>
+				<tr>
+					<th><input class="check-all" type="checkbox"></th>
+					<th>ID</th>
+					<th>Group</th>
+					<th>Header</th>
+					<th>Context</th>
+					<th>Detail</th>
+					<th>Imgpath</th>
+					<th>Linkhref</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				{volist name="list" id="vo"}
+				<tr>
+					<td><input type="checkbox"></td>
+					<td id="vo.id">{$vo.id}</td>
+					<td>{$vo.group}</td>
+					<td>{$vo.header}</td>
+					<td>{$vo.context}</td>
+					<td>{$vo.detail}</td>
+					<td>{$vo.imgpath}</td>
+					<td>{$vo.linkhref}</td>					
+					<td>
+						<a class="btn btn-default" name="edit" style="color: #0088FF;" href="edit" >编辑</a>
+						<a class="btn btn-default" name="forbid" href="forbid">禁用</a>
+						<a class="btn btn-default" name="delete" style="color: #AC2925;" href="delete">删除</a>
+					</td>					
+				</tr>
+				{/volist}
+			</tbody>
+		</table>
+	</div>
+</div>

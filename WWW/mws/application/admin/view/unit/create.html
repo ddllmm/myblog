@@ -1,0 +1,62 @@
+<!--create页面的模版-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li class="{$home}">
+					<a href="home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="{$javascript}">
+					<a href="javascript">Javascript</a>
+				</li>
+				<li class="{$php}">
+					<a href="php">PHP</a>
+				</li>
+				<li class="{$mysql}">
+					<a href="mysql">Mysql</a>
+				</li>
+				<li class="{$other}">
+					<a href="other">other</a>
+				</li>
+				<li class="{$about}">
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h2 class="sub-header">Create Section</h2>
+
+			<form action="created" method="post">
+				<div class="form-group" style="width: 50%;">
+					<label class="control-label">id:</label>
+					<input name="id" type="text" class="form-control" placeholder="id(unique)">
+					<br />
+					<label class="control-label">group:</label>
+					<select name="group" class="form-control">
+						<option>home</option>
+						<option>javascript</option>
+						<option>php</option>
+						<option>mysql</option>
+						<option>other</option>
+						<option>about</option>
+					</select>
+					<br />
+					<label class="control-label">header:</label>
+					<input name="header" type="text" class="form-control" placeholder="header(brief)">
+					<br />
+					<label class="control-label">context:</label>
+					<input name="context" type="text" class="form-control" placeholder="explaination of header">
+					<br />
+					<label class="control-label">detail:</label>
+					<textarea name="detail" type="text" class="form-control" placeholder="article" rows="10"></textarea>
+					<br />
+					<label class="control-label">auther:</label>
+					<input name="auther" type="text" class="form-control">
+					<br />
+					<button class="btn btn-warning" onclick="window.close()">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;
+					<button type="submit" class="btn btn-success">Save</button>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>

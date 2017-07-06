@@ -1,0 +1,81 @@
+<!--content公共模版-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li class="{$home}">
+					<a href="home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="{$javascript}">
+					<a href="javascript">Javascript</a>
+				</li>
+				<li class="{$php}">
+					<a href="php">PHP</a>
+				</li>
+				<li class="{$mysql}">
+					<a href="mysql">Mysql</a>
+				</li>
+				<li class="{$other}">
+					<a href="other">other</a>
+				</li>
+				<li class="{$about}">
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h2 class="sub-header">Section title</h2>
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>group</th>
+							<th>header</th>
+							<th>context</th>
+							<th>createtime</th>
+							<th>auther</th>
+							<th>status</th>
+							<th>operation</th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						{volist name="list" id="vo"}
+						<tr>
+							<td style="width: 5%;" id="id">{$vo.id}</td>
+							<td style="width: 5%;">{$vo.group}</td>
+							<td style="width: 10%;">{$vo.header}</td>
+							<td style="width: 30%;">{$vo.context}</td>
+							<td style="width: 10%;">{$vo.createtime}</td>
+							<td style="width: 10%;">{$vo.auther}</td>
+							<td style="width: 10%;">{$vo.status}</td>
+							<td style="width: 5%;">
+								<button type="button" class="btn btn-success" onclick="window.open('create')">create</button>&nbsp;&nbsp;
+							</td>
+							<td style="width: 5%;">
+								<form action="edit" method="post">
+									<button name="edit_id" type="submit" class="btn btn-default" value="{$vo.id}">edit</button>&nbsp;&nbsp;
+								</form>
+							</td>
+							<td style="width: 5%;">
+								<form action="forbid" method="post">
+									<button name="forbid_id" type="submit" class="btn btn-warning" value="{$vo.id}">forbid</button>&nbsp;&nbsp;
+								</form>
+							</td>
+							<td style="width: 5%;">
+								<form action="delete" method="post">
+									<button name="delete_id" type="submit" class="btn btn-danger" value="{$vo.id}">delete</button>
+								</form>
+							</td>
+						</tr>
+						{/volist}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

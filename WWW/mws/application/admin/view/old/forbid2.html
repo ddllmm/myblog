@@ -1,0 +1,41 @@
+<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li class="{$home}">
+					<a href="home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="{$javascript}">
+					<a href="javascript">Javascript</a>
+				</li>
+				<li class="{$php}">
+					<a href="php">PHP</a>
+				</li>
+				<li class="{$mysql}">
+					<a href="mysql">Mysql</a>
+				</li>
+				<li class="{$other}">
+					<a href="other">other</a>
+				</li>
+				<li class="{$about}">
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<h2 class="sub-header">Forbid</h2>
+			{volist name="list" id="vo"}
+			<form action="forbid" method="post">
+				<div class="form-group" style="width: 50%;">
+					<label class="control-label">Are you sure forbid id:?
+					<input name="forbid_id" type="text" class="form-control" value="{$vo.id}" readonly="readonly"></label>
+					<br />
+					<!--<button class="btn btn-warning" onclick="<script>history.back(-1);</script>">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;-->
+					<button type="submit" class="btn btn-success">Save</button>
+			</form>
+			{/volist}
+			</div>
+		</div>
+	</div>

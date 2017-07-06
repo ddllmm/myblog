@@ -1,0 +1,104 @@
+<!--index页面的模版-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+			<ul class="nav nav-sidebar">
+				<li>
+					<a href="home">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li>
+					<a href="javascript">Javascript</a>
+				</li>
+				<li>
+					<a href="php">PHP</a>
+				</li>
+				<li>
+					<a href="mysql">Mysql</a>
+				</li>
+				<li>
+					<a href="other">other</a>
+				</li>
+				<li>
+					<a href="about">About</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+			<table class="table table-striped" style="width: 50%;">
+				<thead>
+					<tr>
+						<th>System Info</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="width: 50%;">MWS Version:</td>
+						<td>1.0.0</td>
+					</tr>
+					<tr>
+						<td>Current IP:</td>
+						<td>
+							<?php  echo $_SERVER['REMOTE_ADDR']; ?>
+						</td>
+					</tr>
+					<tr>
+						<td>Last LoginIn IP:</td>
+						<td>
+							<?php  echo $_SERVER['REMOTE_ADDR'];  ?>
+						</td>
+					</tr>
+					<tr>
+						<td>Current LoginIn Time:</td>
+						<td>
+							<?php  echo date('y/m/d');   ?>
+						</td>
+					</tr>
+					<tr>
+						<td>Last LoginIn Time:</td>
+						<td>
+							<?php  echo date('y/m/d');  ?>
+						</td>
+					</tr>
+					<tr>
+						<td>PHP Version:</td>
+						<td>
+							<?php  echo PHP_VERSION;  ?>
+						</td>
+					</tr>
+					<tr>
+						<td>System Version:</td>
+						<td>
+							<?php  echo PHP_OS  ?>
+						</td>
+					</tr>
+					<tr>
+						<td>Apache Version:</td>
+						<td>
+							<?php  echo "2.4"  ?>
+						</td>
+					</tr>
+					<tr>
+						<td>Mysql Version:</td>
+						<td>
+							<?php  echo "5.5.53"  ?>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--<h1 class="page-header">Dashboard</h1>
+			<div class="row placeholders">
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<h4>Label</h4>
+					<span class="text-muted">Something else</span>
+				</div>
+				<div class="col-xs-6 col-sm-3 placeholder">
+					<img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+						<h4>Label</h4>
+					<span class="text-muted">Something else</span>
+				</div>
+			</div>-->
+		</div>
+	</div>
+</div>

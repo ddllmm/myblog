@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link href="../../../../public/static/img/MWSLogo.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="../../../../public/static/css/bootstrap.min.css">
+		<title>MWS</title>
+	</head>
+
+	<body >
+		<nav class="navbar navbar-fixed-top " style="background-color: #1685D0">
+			<div class="navbar-header" style="margin-left: 45px;">
+				<a class="navbar-brand" href="Index" style="font-size: 30px; color: #FFFFFF;">MWS</a>
+			</div>
+			<div id="navbar" class="navbar-collapse ">
+				<ul class="nav navbar-nav">
+					<li>
+						<a style="margin-left: 700px;font-size: 30px; color: #FFFFFF;">BackStage</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div style="margin-top: 50px;height: 100%;">
+			<div style="width:10%; height: 900px; overflow: hidden; float: left;background-color:#EEEEEE;">
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<p style="color: #FFFFFF;">Data</p>
+				</div>
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color: #FFFFFF;" href="Home">Home</a>
+				</div>
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Anime">Anime</a>
+				</div>
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Music">Music</a>
+				</div>
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Game">Game</a>
+				</div>
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Vidio">Vidio</a>
+				</div>
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Cool">Cool</a>
+				</div>
+			</div>
+			<div style="width:90%; float: right;border:5px solid white;">
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th ><input class="check-all" type="checkbox"></th>
+							<th >ID</th>
+							<th>Group</th>
+							<th>Header</th>
+							<th>Context</th>
+							<th>Detail</th>
+							<th>Imgpath</th>
+							<th>Linkhref</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						{volist name="list" id="vo"}
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>{$vo.id}</td>
+							<td>{$vo.group}</td>
+							<td>{$vo.header}</td>
+							<td>{$vo.context}</td>
+							<td>{$vo.detail}</td>
+							<td>{$vo.imgpath}</td>
+							<td>{$vo.linkhref}</td>
+							<td>
+								<button class="btn btn-default" name="edit"  style="color: #0088FF;">编辑</button>
+								<button class="btn btn-default" name="forbid">禁用</button>
+								<button class="btn btn-default" name="delete" style="color: #AC2925;">删除</button>
+							</td>
+						</tr>
+						{/volist}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="footer container navbar-fixed-bottom " style="text-align: center;">
+			<a href="">Copyright@2017 MWS </a>
+		</div>
+		<script src="../../../../public/static/js/bootstrap.min.js "></script>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js "></script>
+	</body>
+
+</html>
+<!--<!DOCTYPE html>
+<html>-->
+<!--
+	<head>
+		<meta charset="UTF-8">
+		<link href="../../../../public/static/img/MWSLogo.ico" rel="shortcut icon">
+		<link rel="stylesheet" href="../../../../public/static/css/bootstrap.min.css">
+		<title>MWS</title>
+	</head>
+
+	<body>
+
+		<nav class="navbar navbar-fixed-top " style="background-color: #1685D0">
+
+			<div class="navbar-header" style="margin-left: 45px;">
+				<a class="navbar-brand" href="Index" style="font-size: 30px; margin-left: 30px; color: #FFFFFF;">MWS</a>
+			</div>
+			<div id="navbar" class="navbar-collapse ">
+				<ul class="nav navbar-nav">
+					<li>
+						<a style="margin-left: 700px;font-size: 30px; color: #FFFFFF;">BackStage</a>
+					</li>
+				</ul>
+			</div>
+
+		</nav>
+
+		<div style="margin-top: 50px;height: 100%;">
+			<div style="width:13%; height: 900px; overflow: hidden; float: left;background-color:#EEEEEE;">
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<p style="color: #FFFFFF;">Data</p>
+				</div>
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color: #FFFFFF;" href="Home">Home</a>
+				</div>
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Anime">Anime</a>
+				</div>
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Music">Music</a>
+				</div>
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Game">Game</a>
+				</div>
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Vidio">Vidio</a>
+				</div>
+
+				<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+					<a style="color:#FFFFFF;" href="Cool">Cool</a>
+				</div>
+
+			</div>
+ 			{volist name="list" id="vo"}
+{$vo.id}:{$vo.header}<br/>
+{/volist}
+			<div style="width:86%; margin-top:40px; float: right;border:5px solid white;">
+				<table class="table table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th><input class="check-all" type="checkbox"></th>
+							<th>ID</th>
+							<th>Group</th>
+							<th>Header</th>
+							<th>Context</th>
+							<th>Detail</th>
+							<th>Imgpath</th>
+							<th>Linkhref</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>{$data.id.0}</td>
+							<td>{$data.group.0}</td>
+							<td>{$data.header.0}</td>
+							<td>{$data.context.0}</td>
+							<td>{$data.detail.0}</td>
+							<td>{$data.imgpath.0}</td>
+							<td>{$data.linkhref.0}</td>
+							<td>
+								<a name="edit" title="编辑" style="color: #0088FF;">编辑</a>
+								<a name="forbid" title="禁用">禁用</a>
+								<a name="delete" title="删除" model="Nav" style="color: #AC2925;">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>{$data.id.1}</td>
+							<td>{$data.group.1}</td>
+							<td>{$data.header.1}</td>
+							<td>{$data.context.1}</td>
+							<td>{$data.detail.1}</td>
+							<td>{$data.imgpath.1}</td>
+							<td>{$data.linkhref.1}</td>
+							<td>
+								<a name="edit" title="编辑" style="color: #0088FF;">编辑</a>
+								<a name="forbid" title="禁用">禁用</a>
+								<a name="delete" title="删除" model="Nav" style="color: #AC2925;">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>{$data.id.2}</td>
+							<td>{$data.group.2}</td>
+							<td>{$data.header.2}</td>
+							<td>{$data.context.2}</td>
+							<td>{$data.detail.2}</td>
+							<td>{$data.imgpath.2}</td>
+							<td>{$data.linkhref.2}</td>
+							<td>
+								<a name="edit" title="编辑" style="color: #0088FF;">编辑</a>
+								<a name="forbid" title="禁用">禁用</a>
+								<a name="delete" title="删除" model="Nav" style="color: #AC2925;">删除</a>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>{$data.id.3}</td>
+							<td>{$data.group.3}</td>
+							<td>{$data.header.3}</td>
+							<td>{$data.context.3}</td>
+							<td>{$data.detail.3}</td>
+							<td>{$data.imgpath.3}</td>
+							<td>{$data.linkhref.3}</td>
+							<td>
+								<a name="edit" title="编辑" style="color: #0088FF;">编辑</a>
+								<a name="forbid" title="禁用">禁用</a>
+								<a name="delete" title="删除" model="Nav" style="color: #AC2925;">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="footer container navbar-fixed-bottom " style="text-align: center;">
+			<a href="">Copyright@2017 MWS </a>
+		</div>
+		<script src="../../../../public/static/js/bootstrap.min.js "></script>
+		<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js "></script>
+	</body>
+
+</html>-->

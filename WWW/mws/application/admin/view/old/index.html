@@ -1,0 +1,93 @@
+<div style="margin-top: 50px;height: 100%;">
+	<div style="width:10%; height: 900px; overflow: hidden; float: left;background-color:#EEEEEE;">
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<p style="color: #FFFFFF;">Data</p>
+		</div>
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color: #FFFFFF;" href="home">Home</a>
+		</div>
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="anime">Anime</a>
+		</div>
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="music">Music</a>
+		</div>
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="game">Game</a>
+		</div>
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="vidio">Vidio</a>
+		</div>
+
+		<div style="height:50px;font-size:25px;text-align:center;background-color:#003350;">
+			<a style="color:#FFFFFF;" href="cool">Cool</a>
+		</div>
+
+	</div>
+
+	<div style="width: 100%;height: 50px;background-color: #EEEEEE; margin-top: 5px;">
+		<p style="text-align: center;font-size: 40px;">Welcome to MWS backstage !</p>
+	</div>
+	<div style="width: 215px;height:35px;background-color: #0088FF; margin-top: 5px;float: left;">
+		<p style="font-size: 25px;">System Infomation:</p>
+	</div>
+	<div style="height:35px;margin-top: 5px;margin-left: 220px;  ">
+		<p style="font-size: 25px;color: #0088FF;float: left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MWS Version:</p>
+		<p style="font-size: 25px;">1.0.0</p>
+	</div>
+
+	<div style="width:90%; float: right;">
+
+		<div style="width: 300px;float: left;">
+			<p style="font-size: 20px;color: #0088FF; float: left;">Current IP:
+				<p style="font-size: 20px;">
+					<?php  echo $_SERVER['REMOTE_ADDR']; ?>
+				</p>
+			</p>
+			<p style="font-size: 20px;color: #0088FF; float: left;">Last LoginIn IP:
+				<p style="font-size: 20px;">
+					<?php  echo $_SERVER['REMOTE_ADDR'];  ?>
+				</p>
+			</p>
+			<p style="font-size: 20px;color: #0088FF;float: left;">Current LoginIn Time:
+				<p style="font-size: 20px;">
+					<?php  echo date('y/m/d');   ?>
+				</p>
+			</p>
+			<p style="font-size: 20px;color: #0088FF;float: left;">Last LoginIn Time:
+				<p style="font-size: 20px;">
+					<?php  echo date('y/m/d');  ?>
+				</p>
+			</p>
+		</div>
+
+		<div style="margin-left: 300px;">
+			<p style="font-size: 20px;color: #0088FF;float: left;">PHP Version:
+				<p style="font-size: 20px;">
+					<?php  echo PHP_VERSION;  ?>
+				</p>
+			</p>
+			<p style="font-size: 20px;color: #0088FF;float: left;">System Version:
+				<p style="font-size: 20px;">
+					<?php  echo PHP_OS  ?>
+				</p>
+			</p>
+			<p style="font-size: 20px;color: #0088FF;float: left;">Apache Version:
+				<p style="font-size: 20px;">
+					<?php  echo "2.4"  ?>
+				</p>
+			</p>
+			<p style="font-size: 20px;color: #0088FF;float: left;">Mysql Version:
+				<p style="font-size: 20px;">
+					<?php  echo "5.5.53"  ?>
+				</p>
+			</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,67 @@
+<div class="container">
+	<div class="blog-header">
+		<h1 class="blog-title">{$vo.group}</h1>
+		<p class="lead blog-description"></p>
+	</div>
+	<div class="row">
+		<div class="col-sm-8 blog-main">
+			{volist name="list" id="vo"}
+			<div class="blog-post">
+				<h2 class="blog-post-title">{$vo.header}</h2>
+				<p class="blog-post-meta">{$vo.createtime} by
+					<a href="#">{$vo.auther}</a>
+				</p>
+				<hr>
+				<p>{$vo.context}</p>
+				{$vo.detail}
+			</div>
+			<!-- /.blog-post -->
+			{/volist}
+		</div>
+		<!-- /.blog-main -->
+		<!--<nav>              //分页
+				<ul class="pager">
+					<li>
+						<a href="#">Previous</a>
+					</li>
+					<li>
+						<a href="#">Next</a>
+					</li>
+				</ul>
+		</nav>-->
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+			<div class="sidebar-module sidebar-module-inset">
+				<h4>DLM</h4>
+				<p> --People once lose responsibility,then lose his way.</p>
+			</div>
+			<div class="sidebar-module">
+				<h4>Archives</h4>
+				<ol class="list-unstyled">
+					<li>
+						<a href="">July 2017</a>
+					</li>
+					<li>
+						<a href="archive">June 2017</a>
+					</li>
+				</ol>
+			</div>
+			<div class="sidebar-module">
+				<h4>Find me</h4>
+				<ol class="list-unstyled">
+					<li>
+						<a href="https://github.com/ddllmm/MWS" target="_blank">GitHub</a>
+					</li>
+					<li>
+						<a href="https://gitee.com/ddllmm" target="_blank">Gitee</a>
+					</li>
+					<li>
+						<a href="http://weibo.com/p/1005056160014110" target="_blank">Sina</a>
+					</li>
+				</ol>
+			</div>
+		</div>
+		<!-- /.blog-sidebar -->
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.container -->
